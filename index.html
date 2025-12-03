@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LibiBouw | Waar gebouwen leven</title>
+  <title>LibiBouw | Natuurinclusief bouwen met vogels als kompas</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- HEADER -->
   <header class="header" id="home">
     <div class="container header__inner">
@@ -26,9 +27,9 @@
         <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">☰</button>
         <ul class="nav__list">
           <li><a class="nav__link active" href="#home">Home</a></li>
-          <li><a class="nav__link" href="#about">Over ons</a></li>
-          <li><a class="nav__link" href="#approach">Werkwijze</a></li>
-          <li><a class="nav__link" href="#audience">Voor wie</a></li>
+          <li><a class="nav__link" href="#about">LibiBouw</a></li>
+          <li><a class="nav__link" href="#audience">Doelgroep</a></li>
+          <li><a class="nav__link" href="#steps">Stappen</a></li>
           <li><a class="nav__link" href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -36,202 +37,156 @@
   </header>
 
   <main>
+
     <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero">
       <div class="hero__bg" aria-hidden="true"></div>
       <div class="container hero__content">
-        <div class="hero__badge">Natuurinclusief bouwen met vogels als kompas</div>
-        <h1 id="hero-title" class="hero__title">LibiBouw — waar gebouwen leven</h1>
+        <div class="hero__badge">Natuurinclusief bouwen met focus op vogels</div>
+        <h1 class="hero__title">Waar gebouwen leven</h1>
         <p class="hero__subtitle">
-          Natuurinclusief bouwen is meer dan een groen dak of nestkast.
-          Het is een visie waarbij mens, dier en natuur samenleven in balans.
-          Wij vertalen ecologie naar praktische, haalbare bouwoplossingen.
+          Natuurinclusief bouwen is geen extraatje, maar een visie waarbij mens,
+          dier en natuur samenleven in balans. LibiBouw vertaalt ecologie naar
+          praktische bouwoplossingen met vogels als kompas.
         </p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#contact">Plan een kennismaking</a>
-          <a class="btn btn--ghost" href="#approach">Bekijk onze werkwijze</a>
-        </div>
-
-        <div class="hero__stats">
-          <div class="stat">
-            <div class="stat__num">+ Biodiversiteit</div>
-            <div class="stat__label">meer leefruimte voor vogels</div>
-          </div>
-          <div class="stat">
-            <div class="stat__num">↓ Hittestress</div>
-            <div class="stat__label">groen & water slim geïntegreerd</div>
-          </div>
-          <div class="stat">
-            <div class="stat__num">Praktisch</div>
-            <div class="stat__label">van visie tot uitvoering</div>
-          </div>
+          <a class="btn btn--primary" href="#contact">Plan kennismaking</a>
+          <a class="btn btn--ghost" href="#about">Wat we doen</a>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- UITLEG LIBIBOUW -->
     <section id="about" class="section section--light">
       <div class="container section__content">
         <div class="section__header">
-          <p class="eyebrow">Over LibiBouw</p>
+          <p class="eyebrow">LibiBouw</p>
           <h2>Wij verbinden bouw en biodiversiteit</h2>
           <p class="section__lead">
-            "Libi" staat voor leven. Als adviesbureau voor natuurinclusief bouwen
-            brengen wij alles wat leeft samen op en rond het gebouw:
-            mens, dier en leefomgeving. Elk project is een kans om iets terug te geven
-            aan de natuur — zodat bouwen niet verarmt, maar verrijkt.
-          </p>
-        </div>
-
-        <div class="values">
-          <article class="value-card">
-            <div class="value-card__icon">🌿</div>
-            <h3>Ecologisch verantwoord</h3>
-            <p>
-              Slimme keuzes in materiaal, oriëntatie en inrichting versterken biodiversiteit
-              en vergroten de veerkracht van de plek.
-            </p>
-          </article>
-
-          <article class="value-card">
-            <div class="value-card__icon">🏗️</div>
-            <h3>Bouwkundig haalbaar</h3>
-            <p>
-              We combineren ecologische inzichten met technische realiteit,
-              zodat maatregelen uitvoerbaar blijven.
-            </p>
-          </article>
-
-          <article class="value-card">
-            <div class="value-card__icon">🕊️</div>
-            <h3>Vogelgericht ontwerpen</h3>
-            <p>
-              Nestvoorzieningen, foerageerroutes en beschutting zijn vanaf dag 1 onderdeel
-              van het ontwerp.
-            </p>
-          </article>
-        </div>
-
-        <div class="about__quote">
-          <p>
-            Elk gebouw heeft invloed op zijn omgeving —
+            “Libi” staat voor leven. Elk gebouw heeft invloed op de omgeving —
             de vraag is: versterken we die, of verarmen we die?
           </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card__icon">🌿</div>
+            <h3>Ecologisch verantwoord</h3>
+            <p>
+              We vergroten leefruimte voor vogels en versterken biodiversiteit
+              met slimme, locatiegerichte ingrepen.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">🏗️</div>
+            <h3>Bouwkundig haalbaar</h3>
+            <p>
+              Natuurinclusief hoeft niet ingewikkeld te zijn.
+              Wij zorgen dat maatregelen uitvoerbaar blijven.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">🕊️</div>
+            <h3>Vogels als kompas</h3>
+            <p>
+              Nestvoorzieningen, foerageerroutes en beschutting worden integraal
+              onderdeel van het ontwerp.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- APPROACH / STEPS -->
-    <section id="approach" class="section">
+    <!-- DOELGROEP -->
+    <section id="audience" class="section">
       <div class="container section__content">
         <div class="section__header">
-          <p class="eyebrow">Onze werkwijze</p>
-          <h2>Van inzicht naar impact</h2>
+          <p class="eyebrow">Doelgroep</p>
+          <h2>Voor wie we werken</h2>
           <p class="section__lead">
-            We werken stap voor stap naar een resultaat waarin bouwen en biodiversiteit
-            elkaar versterken. Praktisch, meetbaar en passend bij jouw project.
+            LibiBouw ondersteunt partijen die biodiversiteit structureel willen
+            integreren in bouwprojecten.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Gemeenten</h3>
+            <p>
+              We maken biodiversiteitsdoelen concreet in beleid én uitvoering
+              met heldere onderbouwing.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Ontwikkelaars</h3>
+            <p>
+              Natuurinclusief ontwikkelen zonder vertraging:
+              praktisch, haalbaar en meetbaar.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Architecten</h3>
+            <p>
+              Biodiversiteit als ontwerpkans.
+              Wij leveren input die esthetiek versterkt.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 STAPPEN -->
+    <section id="steps" class="section section--light">
+      <div class="container section__content">
+        <div class="section__header">
+          <p class="eyebrow">Aanpak</p>
+          <h2>Onze 4 stappen</h2>
+          <p class="section__lead">
+            Van analyse tot concreet gebouw dat leefruimte teruggeeft.
           </p>
         </div>
 
         <div class="steps-grid">
           <article class="step-card">
             <div class="step-card__badge">1</div>
-            <h3>Quickscan door ecologen</h3>
+            <h3>Quickscan locatie</h3>
             <p>
-              We starten met een quickscan van de locatie om aanwezige soorten,
-              kansen en aandachtspunten scherp te krijgen.
+              Ecologen brengen soorten, kansen en kwetsbaarheden in kaart.
             </p>
           </article>
 
           <article class="step-card">
             <div class="step-card__badge">2</div>
-            <h3>Inventarisatie voorzieningen</h3>
+            <h3>Ontwerp & voorzieningen</h3>
             <p>
-              We bepalen welke nest- en verblijfplaatsen, groenstructuren en
-              vogelvriendelijke ingrepen nodig zijn.
+              We bepalen welke vogel- en natuurmaatregelen passend zijn.
             </p>
           </article>
 
           <article class="step-card">
             <div class="step-card__badge">3</div>
-            <h3>Afstemmen met partners</h3>
+            <h3>Afstemmen & integreren</h3>
             <p>
-              Samen met gemeente, ontwikkelaar en architect stemmen we maatregelen af
-              op ontwerp en technische mogelijkheden.
+              Samen met partners integreren we maatregelen in het bouwproces.
             </p>
           </article>
 
           <article class="step-card">
             <div class="step-card__badge">4</div>
-            <h3>Implementatie op het gebouw</h3>
+            <h3>Implementatie op gebouw</h3>
             <p>
-              Maatregelen vertalen we naar concrete toepassingen op en rond het gebouw:
-              zichtbaar, voelbaar en functioneel.
-            </p>
-          </article>
-
-          <article class="step-card step-card--wide">
-            <div class="step-card__badge">5</div>
-            <h3>Resultaat: een gebouw dat leeft</h3>
-            <p>
-              Een plek waar mens, dier en leefomgeving in balans samenkomen —
-              gebouwd voor vandaag, met leven voor morgen.
+              We zorgen dat alles uitvoerbaar, zichtbaar en effectief wordt toegepast.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Audience -->
-    <section id="audience" class="section section--light">
-      <div class="container section__content audience">
-        <div class="section__header">
-          <p class="eyebrow">Doelgroep</p>
-          <h2>Voor gemeenten, ontwikkelaars en architecten</h2>
-          <p class="section__lead">
-            LibiBouw ondersteunt partijen die biodiversiteit structureel willen integreren
-            in bouwprojecten — van visie tot uitvoering.
-          </p>
-        </div>
-
-        <div class="audience__grid">
-          <article class="audience-card">
-            <h3>Gemeenten</h3>
-            <p>
-              Beleidsdoelen concreet maken in projecten, met heldere maatregelen
-              en onderbouwing richting vergunning en uitvoering.
-            </p>
-          </article>
-          <article class="audience-card">
-            <h3>Ontwikkelaars</h3>
-            <p>
-              Natuurinclusief ontwikkelen zonder vertraging:
-              praktische ontwerpen met ecologische winst.
-            </p>
-          </article>
-          <article class="audience-card">
-            <h3>Architecten</h3>
-            <p>
-              Biodiversiteit als ontwerpkans.
-              Wij leveren input die esthetiek en functionaliteit versterkt.
-            </p>
-          </article>
-        </div>
-
-        <div class="cta-band">
-          <div>
-            <h3>Laten we samen bouwen aan leven</h3>
-            <p>
-              Heb je plannen voor een project waarbij de leefomgeving centraal staat?
-              Wij denken graag mee.
-            </p>
-          </div>
-          <a class="btn btn--primary" href="#contact">Neem contact op</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT + NEWSLETTER -->
+    <!-- CONTACT -->
     <section id="contact" class="section contact">
       <div class="container contact__grid">
         <div>
@@ -239,26 +194,26 @@
             <p class="eyebrow">Contact</p>
             <h2>Plan een kennismaking</h2>
             <p class="section__lead">
-              Vertel ons over je project. We reageren binnen één werkdag.
+              Vertel ons kort over je project. We reageren binnen één werkdag.
             </p>
           </div>
 
           <form class="form" id="contact-form" novalidate>
             <label class="form__field">
               <span>Naam</span>
-              <input type="text" name="name" placeholder="Uw naam" required />
+              <input type="text" name="name" required />
               <small class="form__error"></small>
             </label>
 
             <label class="form__field">
               <span>E-mail</span>
-              <input type="email" name="email" placeholder="naam@voorbeeld.nl" required />
+              <input type="email" name="email" required />
               <small class="form__error"></small>
             </label>
 
             <label class="form__field">
               <span>Bericht</span>
-              <textarea name="message" rows="4" placeholder="Waar kunnen we bij helpen?" required></textarea>
+              <textarea name="message" rows="4" required></textarea>
               <small class="form__error"></small>
             </label>
 
@@ -267,56 +222,39 @@
           </form>
         </div>
 
-        <div class="newsletter">
-          <div class="section__header section__header--compact">
-            <p class="eyebrow">Nieuwsbrief</p>
-            <h3>Blijf op de hoogte</h3>
-            <p class="section__lead">
-              Inspiratie, cases en tips voor natuurinclusief bouwen met vogels.
-            </p>
-          </div>
-
-          <form class="form form--inline" id="newsletter-form" novalidate>
-            <label class="form__field">
-              <span class="sr-only">E-mail</span>
-              <input type="email" name="newsletterEmail" placeholder="naam@voorbeeld.nl" required />
-              <small class="form__error"></small>
-            </label>
-
-            <button class="btn btn--ghost" type="submit">Aanmelden</button>
-            <p class="form__success" role="status" aria-live="polite"></p>
-          </form>
-
-          <ul class="highlights">
-            <li>Praktische checklists en vogelkalenders</li>
-            <li>Projectupdates en veldbezoeken</li>
-            <li>Advies over regelgeving en vergunningen</li>
-          </ul>
-        </div>
+        <aside class="contact__aside">
+          <h3>Direct contact</h3>
+          <p><strong>E-mail:</strong> info@libibouw.nl</p>
+          <p><strong>Telefoon:</strong> +31 (0)6 0000 0000</p>
+          <p class="muted">
+            Liever even sparren? Bel gerust — we denken graag mee.
+          </p>
+        </aside>
       </div>
     </section>
+
   </main>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
       <div>
-        <a class="logo logo--footer" href="#home">
+        <div class="logo logo--footer">
           <span class="logo__mark">🕊️</span>
           <span class="logo__text">LibiBouw</span>
-        </a>
+        </div>
         <p class="footer__tagline">Samen bouwen aan leefruimte voor mens én vogel.</p>
       </div>
 
-      <nav class="footer__nav" aria-label="Footer navigatie">
+      <nav class="footer__nav">
         <a href="#home">Home</a>
-        <a href="#about">Over ons</a>
-        <a href="#approach">Werkwijze</a>
-        <a href="#audience">Voor wie</a>
+        <a href="#about">LibiBouw</a>
+        <a href="#audience">Doelgroep</a>
+        <a href="#steps">Stappen</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <p class="footer__copy">© <span id="year"></span> LibiBouw. Alle rechten voorbehouden.</p>
+      <p class="footer__copy">© <span id="year"></span> LibiBouw</p>
     </div>
   </footer>
 
