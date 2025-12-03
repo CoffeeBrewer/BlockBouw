@@ -302,3 +302,167 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 800px) {
   .footer__inner { grid-template-columns: 1fr; }
 }
+
+/* =========================
+   HEADER WOW (light)
+========================= */
+.header--wow {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(13, 21, 17, 0.06);
+}
+.header--wow .logo__mark {
+  background:
+    radial-gradient(60% 60% at 30% 20%, #eafff3 0%, #9de9c7 55%, #2fb57f 100%);
+  box-shadow: 0 6px 14px rgba(47,181,127,0.18);
+}
+
+/* =========================
+   HERO WOW
+========================= */
+.hero--wow {
+  position: relative;
+  min-height: 92vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding-top: 1rem;
+}
+
+/* achtergrond met zachte “lucht + natuur” feel */
+.hero--wow .hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1000px 600px at 10% -10%, rgba(47,181,127,0.20), transparent 60%),
+    radial-gradient(900px 600px at 100% 0%, rgba(231,180,85,0.18), transparent 65%),
+    linear-gradient(180deg, #ffffff 0%, #f2f8f5 55%, #f7faf8 100%);
+}
+
+/* extra glow blobs voor WOW */
+.hero__glow {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  filter: blur(80px);
+  opacity: 0.55;
+  transform: translateZ(0);
+}
+.hero__glow--left {
+  left: -160px;
+  top: -120px;
+  background: radial-gradient(circle, rgba(47,181,127,0.9), transparent 60%);
+}
+.hero__glow--right {
+  right: -180px;
+  top: -80px;
+  background: radial-gradient(circle, rgba(231,180,85,0.9), transparent 60%);
+}
+
+.hero--wow .hero__content {
+  position: relative;
+  padding: 7rem 0 4.5rem;
+  text-align: left;
+}
+
+/* kicker pills */
+.hero__kicker {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+}
+.hero__pill {
+  display: inline-flex;
+  padding: .45rem .75rem;
+  border-radius: 999px;
+  font-size: .9rem;
+  font-weight: 600;
+  color: #0f1a14;
+  background: rgba(47,181,127,0.18);
+  border: 1px solid rgba(47,181,127,0.35);
+}
+.hero__pill--soft {
+  background: rgba(13,21,17,0.05);
+  border-color: rgba(13,21,17,0.08);
+  color: var(--muted);
+}
+
+/* WOW titel */
+.hero--wow .hero__title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  line-height: 1.02;
+  margin: 0 0 1rem;
+  letter-spacing: .2px;
+  text-shadow: 0 12px 30px rgba(7,10,8,0.08);
+}
+.hero__title-accent {
+  background: linear-gradient(90deg, var(--primary), var(--primary-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* subtitel */
+.hero--wow .hero__subtitle {
+  max-width: 62ch;
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  color: var(--muted);
+  margin: 0 0 1.8rem;
+}
+
+/* buttons wat dikker */
+.btn--big {
+  padding: 1rem 1.35rem;
+  font-size: 1.05rem;
+}
+
+/* stats onder hero */
+.hero--wow .hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: .9rem;
+  max-width: 980px;
+  margin-top: 2.2rem;
+}
+.hero--wow .stat {
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(13,21,17,0.08);
+  border-radius: 18px;
+  padding: 1.1rem 1.2rem;
+  box-shadow: var(--shadow-soft);
+  transform: translateY(0);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.hero--wow .stat:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+/* scroll hint */
+.hero__scrollhint {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  gap: .35rem;
+  place-items: center;
+  color: var(--muted);
+  font-size: .85rem;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+.hero__scroll-dot {
+  width: 8px;
+  height: 18px;
+  border-radius: 999px;
+  background: rgba(13,21,17,0.14);
+  position: relative;
+  overflow: hidden;
+}
+.hero__scroll-dot::after {
+  content: "";
+  position: absolute;
+  left:
+
