@@ -1,144 +1,97 @@
-// ===============================
-// LibiBouw Onepager Interactions
-// ===============================
+const header = document.querySelector(".header");
+const navList = document.querySelector(".nav__list");
+const navToggle = document.querySelector(".nav__toggle");
+const navLinks = document.querySelectorAll(".nav__link");
+const sections = document.querySelectorAll("section");
+const yearEl = document.getElementById("year");
 
-const header = document.querySelector('.header');
-const navList = document.querySelector('.nav__list');
-const navToggle = document.querySelector('.nav__toggle');
-const navLinks = document.querySelectorAll('.nav__link');
-const sections = document.querySelectorAll('section');
-const yearEl = document.getElementById('year');
+const contactForm = document.getElementById("contact-form");
 
-const contactForm = document.getElementById('contact-form');
-const newsletterForm = document.getElementById('newsletter-form');
-
-// Helper: smooth scrolling
+// smooth scroll
 const smoothScroll = (targetId) => {
   const target = document.querySelector(targetId);
   if (!target) return;
   const headerOffset = header ? header.offsetHeight + 12 : 80;
   const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
-  const offsetPosition = elementPosition - headerOffset;
-
-  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+  window.scrollTo({ top: elementPosition - headerOffset, behavior: "smooth" });
 };
 
-// Toggle mobile nav
+// mobile nav toggle
 if (navToggle && navList) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = navList.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
+  navToggle.addEventListener("click", () => {
+    const isOpen = navList.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
   });
 }
 
-// Smooth scroll on nav click
+// smooth scroll on nav click
 navLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
-    const targetId = link.getAttribute('href');
-    smoothScroll(targetId);
-    navList?.classList.remove('open');
-    navToggle?.setAttribute('aria-expanded', 'false');
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    smoothScroll(link.getAttribute("href"));
+    navList?.classList.remove("open");
+    navToggle?.setAttribute("aria-expanded", "false");
   });
 });
 
-// Header shadow on scroll
+// header shadow on scroll
 const handleScroll = () => {
   if (!header) return;
-  if (window.scrollY > 20) header.classList.add('scrolled');
-  else header.classList.remove('scrolled');
+  header.classList.toggle("scrolled", window.scrollY > 18);
 };
 handleScroll();
-window.addEventListener('scroll', handleScroll);
+window.addEventListener("scroll", handleScroll);
 
-// Active link detection
+// active section highlight
 if (sections.length && navLinks.length) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        const id = entry.target.getAttribute('id');
+        const id = entry.target.id;
         const activeLink = document.querySelector(`.nav__link[href="#${id}"]`);
         if (entry.isIntersecting) {
-          navLinks.forEach((l) => l.classList.remove('active'));
-          activeLink?.classList.add('active');
+          navLinks.forEach((l) => l.classList.remove("active"));
+          activeLink?.classList.add("active");
         }
       });
     },
-    { threshold: 0.42 }
+    { threshold: 0.45 }
   );
-  sections.forEach((section) => observer.observe(section));
+  sections.forEach((s) => observer.observe(s));
 }
 
-// Year in footer
+// footer year
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Form validation helper
+// contact form validation
 const validateEmail = (email) => /[^\s@]+@[^\s@]+\.[^\s@]+/.test(email);
 
-const handleFormSubmit = (form, fields, successMessage) => {
-  if (!form) return;
-
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
     let valid = true;
 
-    fields.forEach(({ name, type }) => {
-      const input = form.elements[name];
-      if (!input) return;
-
-      const errorEl = input.parentElement.querySelector('.form__error');
-      if (errorEl) errorEl.textContent = '';
+    const fields = ["name", "email", "message"];
+    fields.forEach((name) => {
+      const input = contactForm.elements[name];
+      const errorEl = input.parentElement.querySelector(".form__error");
+      if (errorEl) errorEl.textContent = "";
 
       if (!input.value.trim()) {
-        if (errorEl) errorEl.textContent = 'Dit veld is verplicht.';
+        errorEl.textContent = "Dit veld is verplicht.";
         valid = false;
-        return;
       }
 
-      if (type === 'email' && !validateEmail(input.value)) {
-        if (errorEl) errorEl.textContent = 'Vul een geldig e-mailadres in.';
+      if (name === "email" && input.value && !validateEmail(input.value)) {
+        errorEl.textContent = "Vul een geldig e-mailadres in.";
         valid = false;
       }
     });
 
     if (!valid) return;
 
-    const successEl = form.querySelector('.form__success');
-    if (successEl) successEl.textContent = successMessage;
-
-    form.reset();
-
-    // small success fade
-    if (successEl) {
-      successEl.animate(
-        [{ opacity: 0, transform: 'translateY(-4px)' }, { opacity: 1, transform: 'translateY(0)' }],
-        { duration: 240, easing: 'ease-out' }
-      );
-    }
+    const successEl = contactForm.querySelector(".form__success");
+    if (successEl) successEl.textContent = "Bedankt! We nemen snel contact op.";
+    contactForm.reset();
   });
-};
-
-handleFormSubmit(
-  contactForm,
-  [
-    { name: 'name' },
-    { name: 'email', type: 'email' },
-    { name: 'message' }
-  ],
-  'Bedankt! We hebben je bericht ontvangen.'
-);
-
-handleFormSubmit(
-  newsletterForm,
-  [{ name: 'newsletterEmail', type: 'email' }],
-  'Bedankt voor je aanmelding! Je ontvangt binnenkort onze eerstvolgende update.'
-);
-
-// Close mobile nav on outside click
-window.addEventListener('click', (event) => {
-  if (!navList || !navToggle) return;
-  if (!navList.contains(event.target) && !navToggle.contains(event.target)) {
-    navList.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  }
-});
+}
