@@ -16,45 +16,76 @@
 <body>
 
   <!-- HEADER -->
-  <header class="header" id="home">
-    <div class="container header__inner">
-      <a class="logo" href="#home" aria-label="LibiBouw home">
-        <span class="logo__mark">🕊️</span>
-        <span class="logo__text">LibiBouw</span>
-      </a>
+<header class="header header--wow" id="home">
+  <div class="container header__inner">
+    <a class="logo" href="#home" aria-label="LibiBouw home">
+      <span class="logo__mark">🕊️</span>
+      <span class="logo__text">LibiBouw</span>
+    </a>
 
-      <nav class="nav" aria-label="Hoofdnavigatie">
-        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-        <ul class="nav__list">
-          <li><a class="nav__link active" href="#home">Home</a></li>
-          <li><a class="nav__link" href="#about">LibiBouw</a></li>
-          <li><a class="nav__link" href="#audience">Doelgroep</a></li>
-          <li><a class="nav__link" href="#steps">Stappen</a></li>
-          <li><a class="nav__link" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <nav class="nav" aria-label="Hoofdnavigatie">
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <ul class="nav__list">
+        <li><a class="nav__link active" href="#home">Home</a></li>
+        <li><a class="nav__link" href="#about">LibiBouw</a></li>
+        <li><a class="nav__link" href="#audience">Doelgroep</a></li>
+        <li><a class="nav__link" href="#steps">Stappen</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO WOW -->
+<section class="hero hero--wow" aria-labelledby="hero-title">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__glow hero__glow--left" aria-hidden="true"></div>
+  <div class="hero__glow hero__glow--right" aria-hidden="true"></div>
+
+  <div class="container hero__content">
+    <div class="hero__kicker">
+      <span class="hero__pill">Natuurinclusief bouwen</span>
+      <span class="hero__pill hero__pill--soft">Vogels als kompas</span>
     </div>
-  </header>
 
-  <main>
+    <h1 id="hero-title" class="hero__title">
+      Waar gebouwen<br />
+      <span class="hero__title-accent">leven</span>
+    </h1>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="container hero__content">
-        <div class="hero__badge">Natuurinclusief bouwen met focus op vogels</div>
-        <h1 class="hero__title">Waar gebouwen leven</h1>
-        <p class="hero__subtitle">
-          Natuurinclusief bouwen is geen extraatje, maar een visie waarbij mens,
-          dier en natuur samenleven in balans. LibiBouw vertaalt ecologie naar
-          praktische bouwoplossingen met vogels als kompas.
-        </p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="#contact">Plan kennismaking</a>
-          <a class="btn btn--ghost" href="#about">Wat we doen</a>
-        </div>
+    <p class="hero__subtitle">
+      LibiBouw helpt gemeenten, ontwikkelaars en architecten om biodiversiteit
+      vanaf dag één mee te ontwerpen. Geen losse nestkast, maar een gebouw dat
+      écht leefruimte teruggeeft.
+    </p>
+
+    <div class="hero__actions">
+      <a class="btn btn--primary btn--big" href="#contact">Plan een kennismaking</a>
+      <a class="btn btn--ghost btn--big" href="#about">Bekijk onze aanpak</a>
+    </div>
+
+    <div class="hero__stats">
+      <div class="stat">
+        <div class="stat__num">+ Leefruimte</div>
+        <div class="stat__label">voor vogels & biodiversiteit</div>
       </div>
-    </section>
+      <div class="stat">
+        <div class="stat__num">Haalbaar</div>
+        <div class="stat__label">ontwerp ↔ uitvoering</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">Meetbaar</div>
+        <div class="stat__label">impact in elke fase</div>
+      </div>
+    </div>
+
+    <div class="hero__scrollhint" aria-hidden="true">
+      <span class="hero__scroll-dot"></span>
+      <span class="hero__scroll-text">Scroll</span>
+    </div>
+  </div>
+</section>
+
 
     <!-- UITLEG LIBIBOUW -->
     <section id="about" class="section section--light">
